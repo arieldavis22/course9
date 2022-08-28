@@ -12,12 +12,11 @@ public class Password {
         return password ^ key;
     }
 
-    public void storePassword() {
+    public final void storePassword() {
         System.out.println("Saving password as " + this.encryptedPassword);
     }
 
     public boolean letMeIn(int password) {
-        System.out.println(encryptDecrypt(password));
         if(encryptDecrypt(password) == 0) {
             System.out.println("Welcome in");
             return true;
